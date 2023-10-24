@@ -2,7 +2,7 @@ import '../assets/css/header.css';
 import '../assets/css/style.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { solid, regular, light, thin, duotone, icon } from '@fortawesome/fontawesome-svg-core/import.macro' // <-- import styles to be used
-
+import Restaurant from '../assets/restaurant.jpg';
 import RestaurantPic from '../assets/restauranfood.jpg';
 import bruchetta from '../assets/restaurant chef B.jpg';
 import Greeksalad from '../assets/greek salad.jpg';
@@ -16,7 +16,6 @@ function Main() {
   return (
    <>
     <div id="main">
-
       <div id="main-container">
        <div id="desc">
        <h1>Little Lemon</h1>
@@ -34,6 +33,7 @@ function Main() {
 
    <SecondMain/>
    <Testimonals/>
+   <About/>
     </>
   )
 }
@@ -181,5 +181,35 @@ export function Testimonals (){
     </div>
   )
 
+}
+
+
+export function About(){
+  return (
+    <div id="fourth-section">
+
+     <div id="about">
+      <h1>Little Lemon</h1>
+      <h2>Chicago</h2>
+      <p>
+      A hotel is a commercial establishment that provides lodging,
+      meals, and other services to guests, travelers,
+      and tourists. Hotels can range from small family-run businesses to large international chains.
+      Most hotels list a variety of services, such as room service, laundry, and concierge.
+      </p>
+     </div>
+
+     <div id="images">
+      <img src={Restaurant}
+           alt="A pciture of the little lemon restaurant place"
+           title='Little lemon'/>
+      
+     <img src={bruchetta}
+          alt="A picture of cheif in restaurant"
+          title="A cheif in little lemon"/>
+
+     </div>
+    </div>
+  )
 }
 export default Main

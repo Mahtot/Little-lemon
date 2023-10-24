@@ -70,3 +70,154 @@ figure p{
     font-family: karla;
     font-weight: normal;
 }
+
+#fourth-section{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    margin-top: 20vh;
+    gap:60px;
+}
+
+#fourth-section #about{
+    width:40%;
+    margin-left: -10%;
+}
+
+#fourth-section h1{
+    font-size: 64pt;
+    font-family: markazi;
+    font-weight: bold;
+    color: #230C0C;
+}
+
+#fourth-section h2{
+    font-size: 40pt;
+    font-family: markazi;
+    font-weight: 500;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    color:#230C0C;
+}
+
+#fourth-section p{
+    line-height: 1.5;
+    font-size: 16pt;
+    font-family: karla;
+    font-weight: normal;
+    max-width: 64ch;
+    text-align: justify;
+}
+
+
+#fourth-section #images{
+    width:22%;
+}
+
+#fourth-section img{
+    max-width:100%;
+    height:50vh;
+    border-radius: 16px;
+}
+
+#fourth-section img:nth-of-type(1){
+   position: relative;
+}
+
+#fourth-section img:nth-of-type(2){
+    position: relative;
+    left:38%;
+    top:-30vh;
+    z-index: 1;
+}
+
+/* Footer styles */
+ footer{
+    display: grid;
+  
+    grid-template-columns: repeat(4,30vh);
+    grid-template-rows: 20vh;
+    justify-content: space-evenly;
+    padding: 100px;
+    background-color:  #e0dede;
+ }
+
+ footer img{
+    max-width: 100%;
+    
+ }
+  
+ footer #logo{
+    align-self: center;
+ }
+
+ footer #logo img{
+        height:10vh;
+        
+
+ }
+
+footer h3{
+    margin-bottom:20px;
+    font-family: markazi;
+    font-size: 18pt;
+}
+
+footer li{
+    margin-top: 10px;
+}
+
+footer li img{
+    height: 5vh;
+}
+
+
+
+@media (max-width: 768px){
+    #fourth-section{
+        flex-direction: column;
+        margin-top: 50vh;
+        justify-content: center;
+        align-items: center;
+        height:130vh;
+    }
+
+    #fourth-section #about, #images{
+        width: 70%;
+        justify-self:center;
+        gap: 0;
+    }
+
+    #fourth-section #images{
+        width:50%;
+        margin:auto;
+    }
+
+    #fourth-section img:nth-of-type(1){
+        position: relative;
+     }
+     
+     #fourth-section img:nth-of-type(2){
+         position: relative;
+         left:38%;
+         top:-30vh;
+         z-index: 1;
+     }
+
+     footer{
+        display: grid;
+      
+        grid-template-columns:1fr;
+        grid-template-rows: auto;
+        justify-content: center;
+        align-content: center;
+        padding: 100px;
+        background-color:  #e0dede;
+        row-gap: 80px;
+     }
+
+}
+
+
+
+
