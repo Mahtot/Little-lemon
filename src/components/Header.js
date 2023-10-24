@@ -2,36 +2,61 @@ import logo from '../assets/Logo-.jpg';
 import '../assets/css/header.css';
 import Menu from '../assets/menu.png';
 import xSolid from '../assets/x-icon.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { solid, regular, light, thin, duotone, icon } from '@fortawesome/fontawesome-svg-core/import.macro' // <-- import styles to be used
 import Bars from '../assets/bars-solid.svg'
 import { useState } from 'react';
 function Header() {
 
   const [isPressed, setISPressed] = useState(false)
-
+ 
   return (
-   <div>
-    { isPressed ||  <header>
-
+   <div onClick={()=>isPressed?setISPressed(false):""}>
+    <header>
      <img src={logo} 
      alt="Logo of the company"
      title="Little lemon"
      id="logo"
      
      />
-
-     <div className='menu-icon'>
-      <img src={Bars}
-           alt="Menu icon"
-           onClick={()=>{setISPressed(!isPressed)}}/>
-     </div>
      
-     <div></div></header>}
-      {isPressed? <nav>
+
+    {isPressed? <FontAwesomeIcon 
+          icon={solid("x")} 
+          size="xl" 
+          className='menu-icon' 
+          onClick={()=>{setISPressed(!isPressed)}}
+     /> :<FontAwesomeIcon 
+           icon={solid("bars")} 
+           size="xl" 
+           className='menu-icon'
+           onClick={()=>{setISPressed(!isPressed)}}
+           />
+    }
+
+     
+     
+      <nav id="navB" >
      
        <ul>
-     <li>  <img src={xSolid}
-            alt="X button"
-            onClick={()=>{setISPressed(!isPressed)}}/></li>
+      
+            <li className="link"><a href="#">Home</a></li>
+            <li className="link"><a href="#">About</a></li>
+            <li className="link"><a href="#">Menu</a></li>
+            <li className="link"><a href="#">Reservations</a></li>
+            <li className="link"><a href="#">Order Online</a></li>
+            <li className="link"><a href="#">Login</a></li>
+        </ul>
+     </nav>
+     </header>
+          
+      
+     
+{isPressed?
+     <nav id="navB" style={{display:"flex"}}>
+     
+       <ul>
+      
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Menu</a></li>
@@ -39,7 +64,8 @@ function Header() {
             <li><a href="#">Order Online</a></li>
             <li><a href="#">Login</a></li>
         </ul>
-     </nav> : ''}
+     </nav>: ""}
+     
      </div>
     
     
