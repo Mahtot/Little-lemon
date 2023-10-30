@@ -1,4 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect} from "react";
+
+
+
 
 function Reservations() {
     const [reserve, setReserve] = useState([{
@@ -7,10 +10,24 @@ function Reservations() {
                                    number_guests: '',
                                    occasion:''
     }]);
+    
+    
     const availableTimes = ["17:00", "18:00", "19:00" , "20:00", "21:00", "22:00"]
-    const availableTimess = availableTimes.map(time=>{
-                         return <option value={time}>{time}</option>
+    const availableTimess = availableTimes.map((time, index)=>{
+                         return <option value={time} key={index}>{time}</option>
     })
+
+    // useEffect((res)=>{
+    //     const date= new Date();
+    //     const [av, setAv] = useState('')
+    //     fetch(date.now())
+    //     .then(res.json())
+    //     .then(setAv(res))
+    //     return av
+    // })
+   
+
+    
     const handleChange= (e)=>{
         const {name, value} = e.target;
         setReserve((prevReserve)=>({ ...prevReserve, [name]:value }))
