@@ -175,7 +175,33 @@ footer li img{
     height: 5vh;
 }
 
+#reservations-container{
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
 
+#reservations-container h1{
+    text-align: center;
+    font-size: 40pt;
+    font-family: markazi;
+    font-weight: 500;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    color:#230C0C;
+}
+
+#reservations-container label{
+    margin-right: 20px;
+    font-family: markazi;
+    font-size: 18pt;
+}
+
+#reservations-container input, select{
+    padding: 5px;
+    margin-left: 20px;
+    margin-top: 30px;
+}
 
 @media (max-width: 768px){
     #fourth-section{

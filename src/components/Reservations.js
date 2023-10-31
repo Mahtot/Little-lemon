@@ -1,5 +1,5 @@
 import { useState, useEffect} from "react";
-
+import '../assets/css/style.css';
 
 
 
@@ -17,14 +17,7 @@ function Reservations() {
                          return <option value={time} key={index}>{time}</option>
     })
 
-    // useEffect((res)=>{
-    //     const date= new Date();
-    //     const [av, setAv] = useState('')
-    //     fetch(date.now())
-    //     .then(res.json())
-    //     .then(setAv(res))
-    //     return av
-    // })
+  
    
 
     
@@ -39,8 +32,8 @@ function Reservations() {
     }
    
     return (
-    <div>
-        
+    <div id='reservations-container'>
+        <h1>Reserve a table</h1>
         <form 
         style={{display: "grid",
          gap: "20px", justifyContent:"center"}}
